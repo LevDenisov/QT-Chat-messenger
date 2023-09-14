@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
-project(Chat_messenger_on_QT)
+project(chat_messenger_client)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC ON)
@@ -13,8 +13,8 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Chat_messenger_on_QT main.cpp)
-target_link_libraries(Chat_messenger_on_QT
+add_executable(chat_messenger_client main.cpp src/cpp/main_window.cpp src/include/main_window.h src/include/ui/ui_GUI_ChatMessenger.h)
+target_link_libraries(chat_messenger_client
         Qt::Core
         Qt::Gui
         Qt::Widgets
